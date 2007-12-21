@@ -16,6 +16,7 @@ BuildRequires:  perl-devel
 %endif
 BuildRequires:  perl(CGI)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Whenever you use "isa" in UNIVERSAL as a function, a kitten using
