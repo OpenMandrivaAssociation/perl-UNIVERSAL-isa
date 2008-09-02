@@ -1,7 +1,7 @@
 %define module  UNIVERSAL-isa
 %define name    perl-%{module}
-%define version 0.06
-%define release %mkrel 7
+%define version 1.01
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
@@ -34,15 +34,15 @@ In all other cases the real UNIVERSAL::isa is just called directly.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
-%{__make} test
+./Build test
 
 %install
 rm -rf %{buildroot}
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %clean 
 rm -rf %{buildroot}
