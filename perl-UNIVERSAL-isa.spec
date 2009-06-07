@@ -1,6 +1,6 @@
 %define module  UNIVERSAL-isa
 %define name    perl-%{module}
-%define version 1.01
+%define version 1.02
 %define release %mkrel 1
 
 Name:           %{name}
