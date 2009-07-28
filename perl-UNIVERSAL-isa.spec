@@ -1,20 +1,20 @@
-%define module  UNIVERSAL-isa
-%define name    perl-%{module}
-%define version 1.03
-%define release %mkrel 1
+%define upstream_name    UNIVERSAL-isa
+%define upstream_version 1.03
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:           perl-%{upstream_name}
+Version:        %perl_convert_version %{upstream_version}
+Release:        %mkrel 1
+
 Summary:        Hack around calling UNIVERSAL::isa() as a function
-License:        GPL or Artistic
+License:        GPL+ or Artistic
 Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/UNIVERSAL/%{module}-%{version}.tar.bz2
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        http://www.cpan.org/modules/by-module/UNIVERSAL/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(CGI)
 BuildRequires:  perl(Module::Build)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Whenever you use "isa" in UNIVERSAL as a function, a kitten using
@@ -29,7 +29,7 @@ objects as a method.
 In all other cases the real UNIVERSAL::isa is just called directly.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL installdirs=vendor
@@ -49,4 +49,3 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{perl_vendorlib}/UNIVERSAL
 %{_mandir}/*/*
-
