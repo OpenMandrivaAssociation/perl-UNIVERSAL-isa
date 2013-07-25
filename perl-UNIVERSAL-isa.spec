@@ -1,15 +1,15 @@
 %define upstream_name    UNIVERSAL-isa
-%define upstream_version 1.20110614
+%define upstream_version 1.20120726
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 1.20120726
+Release:	1
 
 Summary:	Hack around calling UNIVERSAL::isa() as a function
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/UNIVERSAL-isa-1.20120726.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(CGI)
@@ -98,4 +98,5 @@ perl Makefile.PL installdirs=vendor
 
 * Tue Sep 20 2005 Guillaume Rousse <guillomovitch@mandriva.org> 0.04-1mdk
 - first mdk release
+
 
