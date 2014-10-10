@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 1.20120726
-Release:	1
+Release:	2
 
 Summary:	Hack around calling UNIVERSAL::isa() as a function
 License:	GPL+ or Artistic
