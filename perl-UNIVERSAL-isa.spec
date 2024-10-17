@@ -8,7 +8,7 @@ Release:	3
 Summary:	Hack around calling UNIVERSAL::isa() as a function
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/UNIVERSAL/UNIVERSAL-isa-1.20120726.tar.gz
 
 BuildRequires:	perl-devel
